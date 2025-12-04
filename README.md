@@ -1,6 +1,6 @@
 # VirtualizationToggle
 
-> **Disclaimer**: This is **vibe coded** — I have no experience in .NET. It was built to solve a specific personal pain point.
+> **Disclaimer**: This is **vibe coded** — I have no experience in C#. It was built to solve a specific personal pain point.
 
 The primary reason for building this tool is that undervolting with **ThrottleStop** does not work when the **Virtual Machine Platform** is enabled on Windows 11.
 
