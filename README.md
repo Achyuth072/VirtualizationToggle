@@ -21,18 +21,35 @@ Manually toggling these features to switch between working and gaming is a hassl
 - **Run at Startup**: Built-in option to launch automatically when you log in.
   - *Note*: This feature uses **Windows Task Scheduler** to create a task with "Highest Privileges". This allows the app to start with Administrator rights without triggering a UAC prompt every time you boot.
 
-## Prerequisites
+## Building from Source
 
-- **Operating System**: Windows 10 or Windows 11.
-- **Runtime**: [.NET 9.0 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
-- **Privileges**: Must be run as **Administrator** to modify system features.
+### Prerequisites
+- **Operating System**: Windows 10 or Windows 11
+- **.NET SDK**: [.NET 9.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) (not just the runtime)
+- **Administrator Privileges**: Required to modify system features
 
-## Installation & Usage
+### Build Steps
 
-1.  **Download/Build**: Download the latest release or build the project from source.
-2.  **Run**: Execute `VirtualizationToggle.exe`.
-    - *Note*: You must run the application as Administrator.
-3.  **Interact**:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Achyuth072/VirtualizationToggle.git
+   cd VirtualizationToggle
+   ```
+
+2. **Build the project**:
+   ```bash
+   dotnet build -c Release
+   ```
+
+3. **Run the application** (must be run as Administrator):
+   ```bash
+   cd bin/Release/net9.0-windows
+   VirtualizationToggle.exe
+   ```
+
+   Or right-click `VirtualizationToggle.exe` and select "Run as administrator".
+
+### Usage
     - Locate the icon in your system tray.
     - Right-click to open the menu.
     - Select **Toggle Virtualization** to change the state.
